@@ -2,6 +2,12 @@ extends Sprite2D
 
 var apple_count := 0
 
+@onready var label: Label = get_parent().get_node("AppleText")
+
+
+func _process(_delta: float) -> void:
+	label.text = str(apple_count) + " apples"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
