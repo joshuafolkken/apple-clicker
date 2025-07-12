@@ -6,7 +6,7 @@
 [node name="Main" type="Node2D"]
 
 [node name="Apple" type="Sprite2D" parent="."]
-position = Vector2(552, 320)
+position = Vector2(552, 230)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_o5qli")
 script = ExtResource("2_0wfyh")
@@ -18,9 +18,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 365.0
-offset_top = 152.0
+offset_top = 62.0
 offset_right = 740.0
-offset_bottom = 234.0
+offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -36,9 +36,25 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 406.0
-offset_top = 402.0
+offset_top = 312.0
 offset_right = 705.0
-offset_bottom = 517.0
+offset_bottom = 427.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "サンプル
+テキスト"
+
+[node name="ClickPowerButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 406.0
+offset_top = 454.0
+offset_right = 705.0
+offset_bottom = 569.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
@@ -46,3 +62,4 @@ text = "サンプル
 テキスト"
 
 [connection signal="pressed" from="UpgradeButton" to="Apple" method="_on_button_pressed"]
+[connection signal="pressed" from="ClickPowerButton" to="Apple" method="_on_click_power_button_pressed"]
